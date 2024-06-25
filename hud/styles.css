@@ -1,0 +1,117 @@
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25%, 75% {
+        transform: scale(1.1);
+    }
+}
+
+
+body {
+    background-image: url(https://img.goodfon.com/original/1366x768/5/e4/red-dead-redemption-ii-igra-fon-2.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.hud {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    margin: 25PX;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.background-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.rotated-wrapper{
+    transform: rotate(45deg) !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.top-background {
+    width: 35px;
+    height: 35px;
+    margin-top: -0.1em;
+    margin-left: -0.05em;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.bottom-background {
+    width: 35px;
+    height: 35px;
+    margin-top: 0.45em;
+    margin-left: 0.50em;
+    z-index: 0;
+    border-radius: 5px;
+}
+
+.icon-background {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(26,27,30);
+    border: 1px solid rgb(39,39,42);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.icon-background img {
+    width: 30px;
+    height: 30px;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+.percentage {
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+#heart .top-background, .bottom-background {
+    background-color: rgb(255,43,92);
+}
+
+#gold .top-background, #gold .bottom-background {
+    background-color: rgb(229,162,68);
+}
+
+#water .top-background, #water .bottom-background {
+    background-color: rgb(111,254,251);
+}
+
+#energy .top-background, #energy .bottom-background {
+    background-color:rgb(114,129,254);
+}
+
+
+.heartbeat {
+    animation: heartbeat 0.5s ease-in-out;
+}
